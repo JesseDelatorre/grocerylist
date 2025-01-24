@@ -17,17 +17,17 @@ groceryList.forEach((itemName) => {
 
 
 //getUpperCaseNames
-groceryList.map((itemCaps)=> {
+groceryList.map((itemCaps) => {
 
-console.log(itemCaps.name.toUpperCase());
+  console.log(itemCaps.name.toUpperCase());
 });
 
 
 
 //getItemByld 
-const getItemById = (items, id) =>{
-  const newList = items.find((item) =>{
-    return(item.id === id);
+const getItemById = (items, id) => {
+  const newList = items.find((item) => {
+    return (item.id === id);
   });
   //console.log(newList);
 }
@@ -38,34 +38,35 @@ getItemById(groceryList, 6);
 
 
 //getItemPriceByName
-    //loop
-    const getItemByPrice = (items, price)=>{
-      items.find((itemName) => {
-      for(i=0; i < items.length; i++){
+//loop
+const getItemByPrice = (items, price) => {
+  items.find((itemName) => {
+    for (i = 0; i < items.length; i++) {
       const currentItem = items[i];
-      if(currentItem === price){
+      if (currentItem === price) {
         return true;
       }
       console.log();
-      }
-      return false;
-      
-      }
-      )};
-      getItemByPrice(groceryList, .25);
-    
+    }
+    return false;
+
+  }
+  )
+};
+getItemByPrice(groceryList, .25);
+
 
 
 //getItemsByCategory
-       //.filter
-const getItemsByCategory = ((category) =>{
-return category[0] === `category`;
+//.filter
+const getItemsByCategory = ((category) => {
+  return category[0] === `category`;
 });
 const filteredItems = groceryList.filter(getItemsByCategory);
 console.log(filteredItems);
 //countItems
-  //.reduce
+//.reduce
 //calculateTotalPrice
-  //.reduce
+//.reduce
 
- 
+
